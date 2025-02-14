@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Car</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Images/mainLogo.png" alt="AZoom Car Rental" class="logo">
+            <h1 class="brand-name">AZOOM Car Rental</h1>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    
+    <section class="banner">
+        <div class="banner-text">
+            <h1>We'll Miss You!</h1>
+        </div>
+    </section>
+    
+    <main class="auth-page">
+        <section class="auth-container">
+            <h2>Return Your Car</h2>
+            
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <p><strong>Car:</strong> <span id="car-name"></span></p>
+                <p><strong>Booking ID:</strong> <span id="summary-booking-id"></span></p>
+                <p><strong>License Plate:</strong> <span id="summary-license-plate"></span></p>
+                <p><strong>Rental Duration:</strong> <span id="rental-duration"></span></p>
+                <p><strong>Total Cost:</strong> <span id="total-cost"></span></p>
+            </div>
+
+            <!-- Return Form -->
+            <form class="auth-form" id="return-form">
+                <label for="booking-id">Booking ID:</label>
+                <input type="text" id="booking-id" placeholder="Enter your booking ID" required>
+            
+                <label for="license-plate">Car License Plate:</label>
+                <input type="text" id="license-plate" placeholder="Enter car license plate" required>
+            
+                <button type="submit">Proceed to Payment</button>
+            </form>
+
+            <!-- Confirmation Message (Initially Hidden) -->
+            <div class="confirmation-message" id="return-confirmation" style="display: none;">
+                <h3>Return Confirmed!</h3>
+                <p>Thank you for using AZoom Car Rental. Your return has been processed successfully.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const reservationData = JSON.parse(localStorage.getItem("currentReservation"));
+
+        if (reservationData) {
+            document.getElementById("car-name").textContent = reservationData.carDetails.carName;
+            document.getElementById("summary-booking-id").textContent = "123"; // Fixed Booking ID
+            document.getElementById("summary-license-plate").textContent = "SMM123A"; // Fixed License Plate
+            document.getElementById("rental-duration").textContent = calculateRentalDuration(
+                reservationData.pickupDate, reservationData.returnDate
+            );
+            document.getElementById("total-cost").textContent = calculateTotalCost(
+                reservationData.carDetails.dailyPrice, reservationData.pickupDate, reservationData.returnDate
+            );
+        } else {
+            document.querySelector(".order-summary").innerHTML = "<p>No active reservations found.</p>";
+        }
+
+        document.getElementById("return-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const enteredBookingId = document.getElementById("booking-id").value.trim();
+            const enteredLicensePlate = document.getElementById("license-plate").value.trim();
+
+            // Check if entered values match the fixed values
+            if (enteredBookingId === "123" && enteredLicensePlate.toUpperCase() === "SMM123A") {
+                alert("Return Confirmed! Proceeding to Payment...");
+                window.location.href = "payment.html";
+            } else {
+                alert("Invalid Booking ID or License Plate. Please check your details.");
+            }
+        });
+    });
+
+    // Utility Functions
+    function calculateRentalDuration(startDate, endDate) {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        return Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + " Days";
+    }
+
+    function calculateTotalCost(dailyPrice, startDate, endDate) {
+        const price = parseInt(dailyPrice.replace("$", "").replace("/day", ""));
+        const duration = calculateRentalDuration(startDate, endDate).split(" ")[0];
+        return "$" + (price * duration);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Car</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../../Images/mainLogo.png" alt="AZoom Car Rental" class="logo">
+            <h1 class="brand-name">AZOOM Car Rental</h1>
+        </div>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../reserve.html">Return</a>
+        </nav>
+    </header>
+    <main>
+        <section class="car-details">
+            <div class="left-column">
+                <img src="../../Images/models/e.webp" alt="Mercedes-Benz E-Class" class="car-image">
+                <div class="spec-sheet">
+                    <h3>Mercedes-Benz E-Class Specifications</h3>
+                    <ul>
+                        <li><strong>Engine Type:</strong> 2.0L Turbo Petrol (1991cc)</li>
+                        <li><strong>Range:</strong> 750 Kilometres</li>
+                        <li><strong>Seating Capacity:</strong> 5</li>
+                        <li><strong>Cargo Space:</strong> 540 Litres</li>
+                        <li><strong>Daily Price:</strong> $130/day</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-column">
+                <form class="reserve-form" id="reserve-form" data-car-name="Mercedes-Benz E-Class" data-daily-price="$130/day">
+                    <h3>Reserve Mercedes-Benz E-Class</h3>
+                    <input type="text" id="full-name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="tel" id="contact-no" placeholder="Contact No." required>
+                    
+                    <h4>Rental Details</h4>
+                    <label for="pickup-date">Pick-up Date:</label>
+                    <input type="date" id="pickup-date" required>
+                    <label for="pickup-time">Pick-up Time:</label>
+                    <input type="time" id="pickup-time">
+                    
+                    <label for="return-date">Return Date:</label>
+                    <input type="date" id="return-date" required>
+                    <label for="return-time">Return Time:</label>
+                    <input type="time" id="return-time">
+                
+                    <button type="submit">Confirm Reservation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const reserveForm = document.getElementById("reserve-form");
+
+            if (reserveForm) {
+                reserveForm.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const carName = reserveForm.getAttribute("data-car-name");
+                    const dailyPrice = reserveForm.getAttribute("data-daily-price");
+
+                    const reservation = {
+                        carDetails: { carName, dailyPrice },
+                        fullName: document.getElementById("full-name").value,
+                        email: document.getElementById("email").value,
+                        contactNo: document.getElementById("contact-no").value,
+                        pickupDate: document.getElementById("pickup-date").value,
+                        pickupTime: document.getElementById("pickup-time").value,
+                        returnDate: document.getElementById("return-date").value,
+                        returnTime: document.getElementById("return-time").value
+                    };
+
+                    localStorage.setItem("currentReservation", JSON.stringify(reservation));
+
+                    // Redirect to card details page
+                    window.location.href = "../cardDetails.html";
+                });
+            }
+        });
+    </script>
+</body>
+</html>

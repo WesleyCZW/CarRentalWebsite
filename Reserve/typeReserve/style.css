@@ -1,0 +1,236 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Page Layout */
+/* Main Container for Consistent Layout */
+main.reserve-page {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the content on larger screens */
+}
+
+.reserve-page {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    width: 300px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-group ul li {
+    margin-bottom: 8px;
+}
+
+.filter-group label {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.apply-filters, .clear-filters {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.apply-filters {
+    background-color: #00bcd4;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.apply-filters:hover {
+    background-color: #008c9e;
+}
+
+.clear-filters {
+    background-color: #ff5252;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.clear-filters:hover {
+    background-color: #e53935;
+}
+
+/* Models Section */
+.models {
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+}
+
+/* Category Title Styling */
+.category-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Model List for Side-by-Side Display */
+.model-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 20px; /* Add spacing between cards */
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 20px;
+}
+
+/* Model Card Styling */
+.model-card {
+    flex: 1 1 calc(33.33% - 20px); /* Allow three cards per row */
+    max-width: 300px; /* Optional: Ensure consistency in width */
+    background: #2c2c2c;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Image */
+.model-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Card Content */
+.model-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.model-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+.model-card .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+/* Card Button */
+.model-card a.button {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.model-card a.button:hover {
+    background-color: #008c9e;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .model-card {
+        flex: 1 1 100%; /* Stack one card per row on smaller screens */
+    }
+}

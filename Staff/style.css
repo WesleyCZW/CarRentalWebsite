@@ -1,0 +1,258 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Dashboard Section */
+.dashboard {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard h2 {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#reservation-list {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#reservation-list p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+#reservation-list strong {
+    color: #fff;
+}
+
+/* Damage Verification Section */
+.damage-verification {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.damage-verification h2 {
+    font-size: 2rem;
+    color: #ff5252;
+    margin-bottom: 20px;
+}
+
+.damage-verification label {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #bbb;
+}
+
+.damage-verification input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #3c3c3c;
+    color: white;
+}
+
+.damage-verification input[type="file"] {
+    background-color: transparent;
+}
+
+#mark-returned {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5252;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#mark-returned:hover {
+    background-color: #e53935;
+}
+
+/* Logout Button */
+#logout {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#logout:hover {
+    background: #008c9e;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.active-reservations {
+    width: 80%;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-card {
+    background-color: #2c2c2c;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.verify-damage {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #ff5252;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verify-damage:hover {
+    background-color: #d32f2f;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-button {
+    align-self: flex-end;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#add-to-bill {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-to-bill:hover {
+    background-color: #008c9e;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard,
+    .damage-verification {
+        width: 90%;
+        margin: 20px auto;
+    }
+}

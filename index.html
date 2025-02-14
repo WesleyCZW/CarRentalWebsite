@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/mainLogo.png" alt="AZoom Car Rental" class="logo">
+            <h1 class="brand-name">AZOOM Car Rental</h1>
+        </div>
+        <nav>
+            <a href="Reserve/reserve.html">Reserve a Car</a>
+            <a href="Return/return.html">Return a Car</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="User/login.html">
+                <img src="Images/login.png">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-text">
+                <h1>Welcome to AZOOM Car Rental</h1>
+                <h4>Explore our exclusive lineup of vehicles designed to elevate your every journey</h4>
+            </div>
+        </section>
+        <section class="vehicleBrands">
+            <h2>Reserve By Brand</h2>
+            <div class="brands">
+                <div class="brand">
+                    <a href="Reserve/brandReserve/MB.html"><img src="Images/MB.jpg" alt="Mercedes-Benz"></a>
+                </div>
+                <div class="brand">
+                    <a href="Reserve/brandReserve/BMW.html"><img src="Images/BMW.jpg" alt="BMW"></a>
+                </div>
+                <div class="brand">
+                    <a href="Reserve/brandReserve/Toyota.html"><img src="Images/Toyota.jpg" alt="Toyota"></a>
+                </div>
+                <div class="brand">
+                    <a href="Reserve/brandReserve/Porsche.html"><img src="Images/Porsche.png" alt="Porsche"></a>
+                </div>
+                <div class="brand">
+                    <a href="Reserve/brandReserve/Tesla.html"><img src="Images/Tesla.jpg" alt="Tesla"></a>
+                </div>
+            </div>
+        </section>        
+        <section class="vehicleCategories">
+            <h2>Reserve By Type</h2>
+            <div class="categories">
+                <div class="category">
+                    <img src="Images/models/eqs.webp" alt="EV">
+                    <h3>Electric Vehicles</h3>
+                    <p>Eco-Friendly and Luxurious Rides</p>
+                    <a href="Reserve/typeReserve/EV.html" class="button">Explore!</a>
+                </div>
+                <div class="category">
+                    <img src="Images/models/e.webp" alt="Sedan">
+                    <h3>Sedan</h3>
+                    <p>Quiet and Luxurious Rides</p>
+                    <a href="Reserve/typeReserve/Sedan.html" class="button">Explore!</a>
+                </div>
+                <div class="category">
+                    <img src="Images/models/glc.webp" alt="SUV">
+                    <h3>SUV</h3>
+                    <p>Comfortable and Luxurious Rides</p>
+                    <a href="Reserve/typeReserve/SUV.html" class="button">Explore!</a>
+                </div>
+                <div class="category">
+                    <img src="Images/models/eqv.webp" alt="Van">
+                    <h3>MPV</h3>
+                    <p>Spacious and Comfortable Rides</p>
+                    <a href="Reserve/typeReserve/MPV.html" class="button">Explore!</a>
+                </div>
+                <div class="category">
+                    <img src="Images/models/gt.webp" alt="Coupe">
+                    <h3>Coupe</h3>
+                    <p>Performance and Emotional Rides</p>
+                    <a href="Reserve/typeReserve/Coupe.html" class="button">Explore!</a>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <p>
+                Welcome to AZoom Car Rental, your trusted partner in providing top-tier luxury vehicles for all your transportation needs. 
+                Our fleet encompasses a wide variety of vehicles, from eco-friendly electric cars to extravagant supercars, catering to every preference and occasion.
+            </p>
+            <p>
+                Founded with a vision to revolutionise the car rental industry, we prioritise customer satisfaction, sustainability, and innovation. 
+                Whether you're planning a weekend getaway or a month-long journey, AZoom Car Rental is dedicated to delivering excellence at every step.
+            </p>
+            <h2>Why Choose Us?</h2>
+            <p>
+                As one of the leading car rental companies, we specialise in providing premium vehicles designed to meet your every need. 
+                Our unwavering commitment to sustainability, luxury, exceptional service, and customer satisfaction ensures an unparalleled experience for every journey.
+            </p>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="Images/flexible.svg" alt="Flexible Rental Terms">
+                    <h3>Flexible Rental Terms</h3>
+                    <p>Enjoy flexible pick-up and drop-off options, along with the ability to extend your rental period effortlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="Images/flexible.svg" alt="Loyalty Programmes">
+                    <h3>Loyalty Programmes</h3>
+                    <p>Benefit from exclusive rewards through our loyalty programmes, including discounts and complimentary upgrades for repeat customers.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="Images/flexible.svg" alt="Excellent Customer Service">
+                    <h3>Excellent Customer Service</h3>
+                    <p>Experience unparalleled customer support, with 24/7 assistance provided by our friendly and knowledgeable team.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> contact@azoomcarrental.com
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong> +65 8888 6363
+                </div>
+                <div class="contact-item">
+                    <strong>Address:</strong> 461 Clementi Road, Singapore 599491
+                </div>
+            </div>
+            <img src="Images/location.jpg" alt="AZOOM Car Rental Location" class="contact-image">
+
+            <form class="contact-form" id="contact-form">
+                <h3>Send Us a Message</h3>
+                <input type="text" id="contact-name" placeholder="Your Name" required>
+                <input type="email" id="contact-email" placeholder="Your Email" required>
+                <textarea id="contact-message-text" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

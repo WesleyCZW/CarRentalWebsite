@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+
+/* Reserve Banner */
+.reserve-banner {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+/* Reserve Container */
+.reserve-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Vehicle Info Section */
+.vehicle-info {
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+.vehicle-info img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.vehicle-info p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Car Details Section */
+.car-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px auto;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Left Column Styling */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.spec-sheet {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.spec-sheet h3 {
+    font-size: 1.5rem;
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.spec-sheet ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.spec-sheet li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #dcdcdc;
+}
+
+.spec-sheet li strong {
+    color: #fff;
+}
+
+/* Right Column Styling */
+.right-column {
+    flex: 1;
+}
+
+.reserve-form {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.reserve-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00bcd4;
+}
+
+.reserve-form input,
+.reserve-form select,
+.reserve-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.reserve-form input,
+.reserve-form select {
+    background-color: #3c3c3c;
+    color: white;
+}
+
+.reserve-form button {
+    background-color: #00bcd4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reserve-form button:hover {
+    background-color: #008c9e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-image {
+        max-width: 100%;
+    }
+}

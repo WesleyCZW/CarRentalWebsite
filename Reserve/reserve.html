@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Car</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Images/mainLogo.png" alt="AZoom Car Rental" class="logo">
+            <h1 class="brand-name">AZOOM Car Rental</h1>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <main class="reserve-page">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Type</h4>
+                <ul>
+                    <li><label><input type="checkbox" value="EV"> Electric Vehicles (EV)</label></li>
+                    <li><label><input type="checkbox" value="Sedan"> Sedans</label></li>
+                    <li><label><input type="checkbox" value="SUV"> SUVs</label></li>
+                    <li><label><input type="checkbox" value="MPV"> MPVs</label></li>
+                    <li><label><input type="checkbox" value="Coupe"> Coupes</label></li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <ul>
+                    <li><label><input type="checkbox" value="Tesla"> Tesla</label></li>
+                    <li><label><input type="checkbox" value="Mercedes-Benz"> Mercedes-Benz</label></li>
+                    <li><label><input type="checkbox" value="BMW"> BMW</label></li>
+                    <li><label><input type="checkbox" value="Porsche"> Porsche</label></li>
+                    <li><label><input type="checkbox" value="Toyota"> Toyota</label></li>
+                </ul>
+            </div>
+            <button class="apply-filters">Apply Filters</button>
+        </aside>        
+
+        <section class="models">
+            <!-- Electric Vehicles -->
+            <h3 class="category-title">Electric Vehicles (EV)</h3>
+            <div class="model-list">
+                <div class="model-card">
+                    <img src="../Images/models/model3.jpg" alt="Tesla Model 3">
+                    <h3>Tesla Model 3</h3>
+                    <p>A high-performance electric sedan offering impressive range, advanced tech, and sleek design.</p>
+                    <p class="price">$90/day</p>
+                    <a href="modelReserve/model3.html" class="button">Reserve Now</a>
+                </div>
+                <div class="model-card">
+                    <img src="../Images/models/modely.jpg" alt="Tesla Model Y">
+                    <h3>Tesla Model Y</h3>
+                    <p>A versatile electric SUV with ample cargo space, long range, and Tesla’s signature innovation.</p>
+                    <p class="price">$100/day</p>
+                    <a href="modelReserve/modely.html" class="button">Reserve Now</a>
+                </div>
+                <div class="model-card">
+                    <img src="../Images/models/taycan.webp" alt="Porsche Taycan">
+                    <h3>Porsche Taycan</h3>
+                    <p>A cutting-edge electric sports car delivering exhilarating performance and Porsche’s signature style.</p>
+                    <p class="price">$180/day</p>
+                    <a href="modelReserve/taycan.html" class="button">Reserve Now</a>
+                </div>
+            </div>
+
+            <!-- Sedans -->
+            <h3 class="category-title">Sedans</h3>
+            <div class="model-list">
+                <div class="model-card">
+                    <img src="../Images/models/e.webp" alt="Mercedes-Benz E-Class">
+                    <h3>Mercedes-Benz E-Class</h3>
+                    <p>A premium executive sedan offering a blend of sophistication, cutting-edge technology, and luxurious comfort.</p>
+                    <p class="price">$130/day</p>
+                    <a href="modelReserve/e.html" class="button">Reserve Now</a>
+                </div>
+                <div class="model-card">
+                    <img src="../Images/models/5.webp" alt="BMW 5 Series">
+                    <h3>BMW 5 Series</h3>
+                    <p>A luxury sedan offering advanced technology, a spacious interior, and exceptional performance.</p>
+                    <p class="price">$130/day</p>
+                    <a href="modelReserve/5.html" class="button">Reserve Now</a>
+                </div>
+            </div>
+
+            <!-- SUVs -->
+            <h3 class="category-title">SUVs</h3>
+            <div class="model-list">
+                <div class="model-card">
+                    <img src="../Images/models/x3.webp" alt="BMW X3">
+                    <h3>BMW X3</h3>
+                    <p>A sporty and refined SUV balancing luxury with all-terrain capabilities.</p>
+                    <p class="price">$120/day</p>
+                    <a href="modelReserve/x3.html" class="button">Reserve Now</a>
+                </div>
+                <div class="model-card">
+                    <img src="../Images/models/glc.webp" alt="Mercedes-Benz GLC">
+                    <h3>Mercedes-Benz GLC</h3>
+                    <p>A luxury compact SUV offering dynamic performance, advanced features, and a refined interior.</p>
+                    <p class="price">$120/day</p>
+                    <a href="modelReserve/glc.html" class="button">Reserve Now</a>
+                </div>
+            </div>
+
+            <!-- MPVs -->
+            <h3 class="category-title">MPVs</h3>
+            <div class="model-list">
+                <div class="model-card">
+                    <img src="../Images/models/sienta.png" alt="Toyota Sienta">
+                    <h3>Toyota Sienta</h3>
+                    <p>A practical compact MPV designed for efficient urban travel with flexible seating configurations.</p>
+                    <p class="price">$90/day</p>
+                    <a href="modelReserve/sienta.html" class="button">Reserve Now</a>
+                </div>
+                <div class="model-card">
+                    <img src="../Images/models/alphard.png" alt="Toyota Alphard">
+                    <h3>Toyota Alphard</h3>
+                    <p>A reliable midsize sedan with a focus on comfort, fuel efficiency, and advanced safety features.</p>
+                    <p class="price">$140/day</p>
+                    <a href="modelReserve/alphard.html" class="button">Reserve Now</a>
+                </div>
+            </div>
+
+            <!-- Coupes -->
+            <h3 class="category-title">Coupes</h3>
+            <div class="model-list">
+                <div class="model-card">
+                    <img src="../Images/models/gt.webp" alt="Mercedes-AMG GT">
+                    <h3>Mercedes-AMG GT</h3>
+                    <p>A high-performance coupe blending elegant design with track-ready capabilities.</p>
+                    <p class="price">$220/day</p>
+                    <a href="modelReserve/gt.html" class="button">Reserve Now</a>
+                </div>
+                <div class="model-card">
+                    <img src="../Images/models/911_dakar.webp" alt="Porsche 911 Dakar">
+                    <h3>Porsche 911 Dakar</h3>
+                    <p>A high-performance sports car designed for off-road adventures, combining speed with rugged durability.</p>
+                    <p class="price">$220/day</p>
+                    <a href="modelReserve/911.html" class="button">Reserve Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

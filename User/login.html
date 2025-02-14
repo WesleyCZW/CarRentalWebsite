@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Images/mainLogo.png" alt="AZoom Car Rental" class="logo">
+            <h1 class="brand-name">AZOOM Car Rental</h1>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Welcome Back!</h1>
+        </div>
+    </section>
+    <main class="auth-page">
+        <section class="auth-container">
+            <h2>Login to Your Account</h2>
+            <form class="auth-form" id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+
+            <!-- Staff Login Button -->
+            <button id="staff-login-button" class="staff-button">Login as Staff</button>
+
+            <!-- Hidden Staff Login Form -->
+            <form class="auth-form" id="staff-login-form" style="display: none;">
+                <h3>Staff Login</h3>
+                <label for="staff-id">Staff ID:</label>
+                <input type="text" id="staff-id" placeholder="Enter your Staff ID" required>
+
+                <label for="staff-password">Password:</label>
+                <input type="password" id="staff-password" placeholder="Enter your password" required>
+
+                <button type="submit">Login as Staff</button>
+            </form>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

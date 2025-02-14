@@ -1,0 +1,361 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    border-bottom: 2px solid #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+nav a img {
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a img:hover {
+    transform: scale(1.3);
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    text-align: center;
+    background: url('Images/Banner.webp') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner h4 {
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+/* Reserve By Brand Section */
+.vehicleBrands {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000000; /* Dark background */
+    color: white;
+}
+
+.vehicleBrands h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.brands {
+    display: flex;
+    justify-content: space-around; /* Evenly spaces the logos */
+    align-items: center; /* Vertically aligns the logos */
+    gap: 30px; /* Space between logos */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.brand {
+    width: 100px; /* Ensures uniform width */
+    height: 100px; /* Ensures uniform height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation on hover */
+}
+
+.brand img {
+    max-width: 100%; /* Logos resize to fit container width */
+    max-height: 100%; /* Logos resize to fit container height */
+    object-fit: contain; /* Ensures aspect ratio is preserved */
+}
+
+.brand:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5); /* Add subtle glow on hover */
+}
+
+
+
+/* Vehicle Categories */
+.vehicleCategories {
+    padding: 20px;
+    text-align: center;
+}
+
+.vehicleCategories h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+}
+
+.category {
+    background: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.category h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.category p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.category a.button {
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.category a.button:hover {
+    background: #008c9e;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* General Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    background-color: #1f1f1f;
+}
+
+/* About Section Styling */
+.about {
+    background-color: #363636; /* Dark background */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Section Title Styling */
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Paragraph Styling */
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8; /* Improve readability */
+    margin: 10px auto 30px;
+    color: #dcdcdc;
+    max-width: 800px; /* Constrain width to prevent spanning across the entire page */
+}
+
+/* Features Container */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    margin-top: 30px;
+}
+
+/* Feature Card Styling */
+.feature-card {
+    background-color: #f4e1d2; /* Light beige background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 250px; /* Reduced width for a compact look */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card img {
+    width: 50px; /* Icon size */
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #1f1f1f;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.feature-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* Contact Section */
+.contact {
+    background-color: #1f1f1f;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact .contact-info {
+    margin-bottom: 30px;
+}
+
+.contact .contact-item {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #008c9e;
+}
+
+.contact-image {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}

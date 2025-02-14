@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Details</title>
+    <link rel="stylesheet" href="../Return/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Images/mainLogo.png" alt="AZoom Car Rental" class="logo">
+            <h1 class="brand-name">AZOOM Car Rental</h1>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    
+    <main class="auth-page">
+        <section class="auth-container">
+            <h2>Enter Card Details</h2>
+            
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <p><strong>Car:</strong> <span id="car-name"></span></p>
+                <p><strong>Rental Duration:</strong> <span id="rental-duration"></span></p>
+                <p><strong>Total Cost:</strong> <span id="total-cost"></span></p>
+            </div>
+
+            <!-- Pickup Location -->
+            <div class="pickup-location">
+                <h3>Pickup Location</h3>
+                <p><strong>Address:</strong> 461 Clementi Road, Singapore 599491</p>
+                <img src="../Images/location.jpg" alt="Pickup Location" class="pickup-image">
+            </div>
+
+            <!-- Payment Form -->
+            <form class="auth-form" id="payment-form">
+                <label for="card-name">Cardholder Name:</label>
+                <input type="text" id="card-name" placeholder="Enter name on card" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" placeholder="Enter your card number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="Enter CVV" required>
+
+                <button type="submit">Confirm Reservation</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

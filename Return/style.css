@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    text-align: center;
+    background: url('../Images/Banner.webp') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* General Page Layout */
+.auth-page {
+    display: flex;
+    justify-content: space-between; /* Spread items across the page */
+    align-items: flex-start;
+    gap: 50px; /* Increased spacing between sections */
+    padding: 50px;
+    max-width: 1400px; /* Max width for larger screens */
+    margin: auto; /* Center on the screen */
+}
+
+/* Order Summary */
+.order-summary {
+    flex: 2; /* Occupies more space relative to the form */
+    background-color: #2c2c2c;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: left;
+    min-width: 400px;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.order-summary h3 {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.order-summary p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Auth Container (Used for Forms) */
+.auth-container {
+    flex: 3; /* Slightly larger than the summary for balance */
+    background-color: #1f1f1f;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    min-width: 400px;
+}
+
+/* Page Headings */
+.auth-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00bcd4;
+}
+
+/* Forms */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.auth-form label {
+    text-align: left;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: #bbb;
+}
+
+/* Input Fields */
+.auth-form input,
+.auth-form select {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+/* Buttons */
+.auth-form button {
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #00bcd4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-form button:hover {
+    background-color: #008c9e;
+}
+
+/* Links */
+.auth-container p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.auth-container a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .auth-page {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .order-summary,
+    .auth-container {
+        max-width: 100%;
+        flex: none;
+    }
+}
+
+.hidden {
+    display: none;
+}
+#reservation-success {
+    background-color: #00bcd4;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
